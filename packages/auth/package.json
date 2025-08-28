@@ -1,0 +1,73 @@
+{
+	"name": "@fullstack/auth",
+	"version": "0.1.0",
+	"description": "Authentication layer with better-auth and Drizzle ORM for tanstack-fullstack",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./server": {
+			"types": "./dist/server.d.ts",
+			"import": "./dist/server.js",
+			"default": "./dist/server.js"
+		},
+		"./types": {
+			"types": "./dist/types.d.ts",
+			"import": "./dist/types.js",
+			"default": "./dist/types.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"dev:watch": "tsdown --watch",
+		"clean": "rm -rf dist",
+		"check-types": "tsc --noEmit",
+		"lint": "biome check src",
+		"lint:fix": "biome check --write src",
+		"test": "vitest",
+		"test:run": "vitest run",
+		"test:watch": "vitest --watch",
+		"test:ui": "vitest --ui",
+		"test:coverage": "vitest run --coverage"
+	},
+	"keywords": [
+		"auth",
+		"authentication",
+		"better-auth",
+		"drizzle",
+		"typescript",
+		"monorepo"
+	],
+	"peerDependencies": {
+		"better-auth": "^1.2.10",
+		"drizzle-orm": "^0.44.4"
+	},
+	"dependencies": {
+		"@fullstack/database": "workspace:*",
+		"tsdown": "^0.14.1",
+		"zod": "^4.0.5"
+	},
+	"devDependencies": {
+		"@types/node": "^22.13.11",
+		"tsdown": "^0.14.1",
+		"typescript": "^5.8.2",
+		"vitest": "^3.2.0"
+	},
+	"author": "tanstack-fullstack Team",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"directory": "packages/auth"
+	}
+}
