@@ -23,18 +23,30 @@
 			"!**/.wrangler",
 			"!**/.alchemy",
 			"!**/wrangler.jsonc",
-			"!**/.source"
+			"!**/.source",
+			"!**/.nitro",
+			"!**/.output",
+			"!**/.tanstack"
 		]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab"
 	},
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
+			"suspicious": {
+				"noUnknownAtRules": "off"
+			},
 			"correctness": {
 				"useExhaustiveDependencies": "info"
 			},
@@ -43,7 +55,11 @@
 					"level": "warn",
 					"fix": "safe",
 					"options": {
-						"functions": ["clsx", "cva", "cn"]
+						"functions": [
+							"clsx",
+							"cva",
+							"cn"
+						]
 					}
 				}
 			},

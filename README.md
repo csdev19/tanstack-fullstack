@@ -8,12 +8,9 @@ This project was created with [Better-T-Stack](https://github.com/AmanVarshney01
 - **TanStack Start** - SSR framework with TanStack Router
 - **TailwindCSS** - Utility-first CSS for rapid UI development
 - **shadcn/ui** - Reusable UI components
-- **Hono** - Lightweight, performant server framework
-- **oRPC** - End-to-end type-safe APIs with OpenAPI integration
-- **workers** - Runtime environment
 - **Drizzle** - TypeScript-first ORM
 - **PostgreSQL** - Database engine
-- **Authentication** - Email & password authentication with Better Auth
+- **Better-auth: Authentication** - Email & password authentication with Better Auth
 - **Biome** - Linting and formatting
 - **Husky** - Git hooks for code quality
 - **Turborepo** - Optimized monorepo build system

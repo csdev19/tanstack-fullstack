@@ -1,22 +1,28 @@
-import { authClient } from "@/lib/auth-client";
 import { useForm } from "@tanstack/react-form";
 import { useNavigate } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { toast } from "sonner";
 import z from "zod";
+import { authClient } from "@/lib/auth-client";
 import Loader from "./loader";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 
-export default function SignInForm({
-	onSwitchToSignUp,
-}: {
-	onSwitchToSignUp: () => void;
-}) {
+export default function SignInForm() {
 	const navigate = useNavigate({
 		from: "/",
 	});
-	const { isPending } = authClient.useSession();
+	const { isPending, data: session } = authClient.useSession();
+
+	useEffect(() => {
+		if (session) {
+			navigate({
+				to: "/dashboard",
+				replace: true,
+			});
+		}
+	}, [session, navigate]);
 
 	const form = useForm({
 		defaultValues: {
@@ -33,6 +39,7 @@ export default function SignInForm({
 					onSuccess: () => {
 						navigate({
 							to: "/dashboard",
+							replace: true,
 						});
 						toast.success("Sign in successful");
 					},
@@ -55,8 +62,8 @@ export default function SignInForm({
 	}
 
 	return (
-		<div className="mx-auto w-full mt-10 max-w-md p-6">
-			<h1 className="mb-6 text-center text-3xl font-bold">Welcome Back</h1>
+		<div className="mx-auto mt-10 w-full max-w-md p-6">
+			<h1 className="mb-6 text-center font-bold text-3xl">Welcome Back</h1>
 
 			<form
 				onSubmit={(e) => {
@@ -128,7 +135,7 @@ export default function SignInForm({
 			<div className="mt-4 text-center">
 				<Button
 					variant="link"
-					onClick={onSwitchToSignUp}
+					onClick={() => navigate({ to: "/signup" })}
 					className="text-indigo-600 hover:text-indigo-800"
 				>
 					Need an account? Sign Up
