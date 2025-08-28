@@ -5,7 +5,7 @@
 
 # tanstack-fullstack
 
-This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Start, Hono, ORPC, and more.
+Welcome to tanstack-fullstack - a cutting-edge, zero-friction TypeScript stack designed to supercharge your fullstack development experience. Built with modern best practices and powerful tools, this stack enables you to create robust, type-safe applications with unparalleled developer experience and productivity.
 
 ## Features
 
@@ -70,3 +70,8 @@ tanstack-fullstack/
 - `pnpm db:push`: Push schema changes to database
 - `pnpm db:studio`: Open database studio UI
 - `pnpm check`: Run Biome formatting and linting
+
+
+## Credits
+
+This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack). 
