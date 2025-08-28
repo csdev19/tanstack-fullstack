@@ -1,4 +1,6 @@
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/804c16d9-b8c0-4b7e-90d1-d5a18a86a65e" />
+<div align="center">
+  <img width="300" height="300" alt="tanstack-fullstack logo" src="https://github.com/user-attachments/assets/804c16d9-b8c0-4b7e-90d1-d5a18a86a65e" />
+</div>
 
 
 # tanstack-fullstack
