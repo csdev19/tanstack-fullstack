@@ -2,8 +2,7 @@ import alchemy from "alchemy";
 import { TanStackStart } from "alchemy/cloudflare";
 import { config } from "dotenv";
 
-config({ path: "./.env" });
-config({ path: "./apps/web/.env" });
+config({ path: ".env" });
 
 const app = await alchemy("tanstack-fullstack");
 

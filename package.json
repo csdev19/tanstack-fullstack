@@ -7,6 +7,7 @@
 	],
 	"scripts": {
 		"check": "biome check --write .",
+		"lint": "biome lint --write .",
 		"prepare": "husky",
 		"ruler:apply": "pnpm dlx @intellectronica/ruler@latest apply --local-only",
 		"deploy": "alchemy deploy",
