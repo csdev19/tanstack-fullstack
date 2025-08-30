@@ -1,6 +1,6 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "tanstack-fullstack",
+	"name": "tanstack-fullstack-v2",
 	"main": ".output/server/index.mjs",
 	"compatibility_date": "2025-08-27",
 	"compatibility_flags": ["nodejs_compat"],
@@ -9,5 +9,6 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"env": {}
 }
